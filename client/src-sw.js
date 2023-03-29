@@ -5,6 +5,7 @@ const { CacheableResponsePlugin } = require('workbox-cacheable-response');
 const { ExpirationPlugin } = require('workbox-expiration');
 const { precacheAndRoute } = require('workbox-precaching/precacheAndRoute');
 
+// Precache and route the URLs specified in the manifest file
 precacheAndRoute(self.__WB_MANIFEST);
 
 const pageCache = new CacheFirst({
